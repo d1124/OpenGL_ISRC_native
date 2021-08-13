@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:text_helloworld"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="Hello World"
+        ohos:text_size="100"/>
+
+    <ohos.agp.components.surfaceprovider.SurfaceProvider
+        ohos:id="$+id:sv"
+        ohos:height="250fp"
+        ohos:width="250fp"
+        ohos:layout_alignment="horizontal_center"
+
+        />
+    <Button
+        ohos:id="$+id:sv2"
+        ohos:height="250fp"
+        ohos:width="250fp"
+        ohos:text_color="blue"
+        ohos:text="显示48和紫色正方形则成功"
+        ohos:text_size="60"
+        ohos:layout_alignment="horizontal_center"
+        />
+
+
+</DirectionalLayout>

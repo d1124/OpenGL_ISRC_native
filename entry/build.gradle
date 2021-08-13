@@ -1,0 +1,29 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\wsy证书上传\\mytestapp.p12')
+            storePassword '0000001617B3DAD23ACE8E81DD5A8EF6FA072D0F8914AD4F5EE76C4AE56EA1266A23C0A28A5C'
+            keyAlias = 'mytestapp'
+            keyPassword '00000016B164326FC198161FA8CA3084CDF94CDD2BC6682B7B3017240EDF82E5B71E04C5A410'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\wsy证书上传\\mytestapp_newDebug.p7b')
+            certpath file('D:\\wsy证书上传\\mytestapp2.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+    externalNativeBuild {
+        path "src/main/cpp/CMakeLists.txt"
+        arguments "-v"
+        abiFilters "arm64-v8a"
+        cppFlags ""
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testCompile 'junit:junit:4.12'
+}
